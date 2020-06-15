@@ -31,6 +31,7 @@ The results would be offered in a freemium model. E.g. the first X queries per d
 If the algorithm is succesful then add-ons can be numerous to expand revenue possibilities:
 * Email add-ons; search the email for identifiers, and make them click-able (e.g. highlight a bond isin and provide a link to the refernece data, or price source)
 * Powering internal search: allow organizations to use their own systems for lookup, so that the algo returns company internal links.
+* Get more challenging. E.g. interpret descriptions such as US 10 6/10 -> Us 10 yr bond paying .6%; then find the identifiers
 
 # Deployment Model
 
@@ -40,4 +41,23 @@ If the algorithm is succesful then add-ons can be numerous to expand revenue pos
 * Exposed to users using a public swagger endpoint via AWS API gateway
 * The model would be hosted on an S3 bucket
 
+
 Fixed costs likely to be less than $10/month. 
+
+# Examples
+
+## Inputs / Outputs
+
+BBG821804393 -> could use a regex patern or CNN to recognize the first 3 digits are BBG and match on that basis
+ISIN -> US9183893; again could use regex
+SEC LEI -> 7ZW8QJWVPR4P1J1KQY45 -> how to recognize? https://www.gleif.org/lei/7ZW8QJWVPR4P1J1KQY45
+
+## Algo
+
+Day 1:
+
+Use a CNN to quickly guess the ID types. Then use regex to exclude impossible matches. Then lookup 3rd party services to affirm likelihood of being a real identifier.
+
+Day 2:
+
+Multi-word pattern matching; e.g. "UST10 Comdty" -> https://www.openfigi.com/id/BBG0036CPY08
