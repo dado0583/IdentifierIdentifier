@@ -1,5 +1,5 @@
 # IdentifierIdetifier
-Given an financial identifier, the algo tries to identify the type of identifier, and a place to get the data
+Given a financial identifier, the algo tries to identify the type of identifier, and a place to get the data.
 
 # Concept
 Within finance there are so many identifiers: legal entities, instrument identifiers, product codes, exchnge names, 
@@ -41,7 +41,6 @@ If the algorithm is succesful then add-ons can be numerous to expand revenue pos
 * Exposed to users using a public swagger endpoint via AWS API gateway
 * The model would be hosted on an S3 bucket
 
-
 Fixed costs likely to be less than $10/month. 
 
 # Examples
@@ -61,3 +60,18 @@ Use a CNN to quickly guess the ID types. Then use regex to exclude impossible ma
 Day 2:
 
 Multi-word pattern matching; e.g. "UST10 Comdty" -> https://www.openfigi.com/id/BBG0036CPY08
+
+Day 3: 
+
+More identifier types, such as legal entity identifiers, and ability to map free text to idenfitiers. Eg. Volkswagon AG to VW AG.
+
+* Scrapers to get more source data, if partners cannot provide large data sets
+* Find free places to send people to after match (e.g. exchanges websites)
+
+Day 4:
+
+Ability to show relationships such as VWAGY ADR is a child of VW AG listed in Germany
+
+Day 5:
+
+
