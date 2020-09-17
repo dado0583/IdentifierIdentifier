@@ -57,6 +57,8 @@ Day 1:
 
 Use a CNN to quickly guess the ID types. Then use regex to exclude impossible matches. Then lookup 3rd party services to affirm likelihood of being a real identifier.
 
+![Basic Architecture](Market Data _ Data Lake - Page 4.png)
+
 Day 2:
 
 Multi-word pattern matching; e.g. "UST10 Comdty" -> https://www.openfigi.com/id/BBG0036CPY08
@@ -72,6 +74,5 @@ Day 4:
 
 Ability to show relationships such as VWAGY ADR is a child of VW AG listed in Germany
 
-Day 5:
 
 
