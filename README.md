@@ -51,13 +51,19 @@ BBG821804393 -> could use a regex patern or CNN to recognize the first 3 digits 
 ISIN -> US9183893; again could use regex
 SEC LEI -> 7ZW8QJWVPR4P1J1KQY45 -> how to recognize? https://www.gleif.org/lei/7ZW8QJWVPR4P1J1KQY45
 
-## Algo
+## Sprints
 
 Day 1:
 
 Use a CNN to quickly guess the ID types. Then use regex to exclude impossible matches. Then lookup 3rd party services to affirm likelihood of being a real identifier.
 
+### Architecture
+
 ![Basic Architecture](https://github.com/dado0583/IdentifierIdentifier/blob/master/Market%20Data%20_%20Data%20Lake%20-%20Page%204.png)
+
+### User Interface
+
+![Basic Architecture](https://github.com/dado0583/IdentifierIdentifier/blob/master/Market%20Data%20_%20Data%20Lake%20-%20Page%205.png)
 
 Day 2:
 
