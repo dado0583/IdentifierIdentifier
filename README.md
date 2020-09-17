@@ -57,7 +57,7 @@ Day 1:
 
 Use a CNN to quickly guess the ID types. Then use regex to exclude impossible matches. Then lookup 3rd party services to affirm likelihood of being a real identifier.
 
-![Basic Architecture](Market Data _ Data Lake - Page 4.png)
+![Basic Architecture](https://github.com/dado0583/IdentifierIdentifier/blob/master/Market%20Data%20_%20Data%20Lake%20-%20Page%204.png)
 
 Day 2:
 
