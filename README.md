@@ -59,7 +59,7 @@ Use a CNN to quickly guess the ID types. Then use regex to exclude impossible ma
 
 ### Architecture
 
-![Basic Architecture](https://github.com/dado0583/IdentifierIdentifier/blob/master/PLanning/Arch.png)
+![Basic Architecture](https://github.com/dado0583/IdentifierIdentifier/blob/master/Planning/Arch.png)
 
 ### User Interface
 
@@ -83,7 +83,7 @@ Ability to show relationships such as VWAGY ADR is a child of VW AG listed in Ge
 
 ### Search API Formats
 
-See PLanning/Search/README.md
+See Planning/Search/README.md
 
 
 
