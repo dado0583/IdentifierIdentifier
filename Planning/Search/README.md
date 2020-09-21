@@ -26,7 +26,8 @@ I'll be substantially revising these formats. See below
     "912828P46": [
         "CUSIP"
     ]
-}```
+}
+```
 
 # Target state
 
@@ -53,7 +54,7 @@ There are 3 categories of result:
 * Data Attributes. Product information about what this identifier is. For example, is it a bond, swap, etc. What's the maturity date, etc. Maybe this could be an accordian 'More information' which slides out.
 
 * Data Sources. Where you can find more information about the results. We'll prefer the official source, if that source is free. These could be represented as cards in the UI.
-
+```
 {
     "input" : ["912828P46"],
     "entities" : {
@@ -101,3 +102,4 @@ There are 3 categories of result:
         }]
     }]
 }
+```
