@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
+import Auth from './Auth'
 import './App.css';
 
 function App() {
+  const [token, setToken] = useState('');
+  const onLoginSuccess = (result) => {
+    console.log('id token + ' + result.getIdToken().getJwtToken());
+    setToken(result.getIdToken().getJwtToken())
+  };
+  const onLoginFailure = (err) => console.log('error logging in:', err.message)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {!token ? <Auth onSuccess={onLoginSuccess} onFailure={onLoginFailure} /> : <p>logged in!</p>}
     </div>
   );
 }
