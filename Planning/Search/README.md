@@ -32,6 +32,8 @@ I'll be substantially revising these formats. See below
 
 # Target state
 
+TODO: Cut into sprints
+
 ## Input
 
 ### GET: <url>?s=912828P46 
