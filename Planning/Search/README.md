@@ -22,7 +22,8 @@ Returns a map. The key will be the same as your input. The value is a list of ti
 
 I'll be substantially revising these formats. See below
 
-```{
+```
+{
     "912828P46": [
         "CUSIP"
     ]
