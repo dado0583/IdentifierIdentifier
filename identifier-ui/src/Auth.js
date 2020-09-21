@@ -27,8 +27,9 @@ const Auth = ({onSuccess, onFailure}) => {
 
   return (
     <div>
-      <input value={username} onChange={(e) => setUsername(e.target.value)} />
-      <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+      <h1>Login</h1>
+      <input placeholder="username" value={username} onChange={(e) => setUsername(e.target.value)} />
+      <input placeholder="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
       <button onClick={doLogin}>Log in</button>
     </div>
   );

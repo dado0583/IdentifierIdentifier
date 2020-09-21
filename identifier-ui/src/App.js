@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Auth from './Auth'
+import Search from './Search'
 import './App.css';
 
 function App() {
@@ -12,7 +13,9 @@ function App() {
 
   return (
     <div className="App">
-      {!token ? <Auth onSuccess={onLoginSuccess} onFailure={onLoginFailure} /> : <p>logged in!</p>}
+      {
+        !token ? <Auth onSuccess={onLoginSuccess} onFailure={onLoginFailure} /> : <Search token={token} />
+      }
     </div>
   );
 }
