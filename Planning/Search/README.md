@@ -58,7 +58,7 @@ There are 3 categories of result:
 ```
 {
     "input" : ["912828P46"],
-    "entities" : {
+    "results" : [{
         "912828P46": { #Calling entity, as we will support more than identifiers longer term I think
         "substring": [0, 8],
         "entity" : "CUSIP",
