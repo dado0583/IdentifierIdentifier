@@ -2,12 +2,13 @@ import React, {useState} from 'react'
 import axios from 'axios'
 
 const API_URL = 'https://mkd29ltjoa.execute-api.us-east-1.amazonaws.com/default/WhichIdentifier'
-
+                 
 const Search = (token) => {
   const [query, setQuery] = useState('');
   const submit = () => {
     const payload = [query];
-    const headers = {Dave: token}
+    const headers = {headers : {Dave: token.token}}
+
     axios.post(API_URL, payload, headers).then((resp) => {
       console.log('got API response', resp)
     }).catch(console.error)
