@@ -14,7 +14,7 @@ const Auth = ({onSuccess, onFailure}) => {
     };
     var authenticationDetails = new cognito.AuthenticationDetails(authenticationData);
     var userData = {
-      Username : authenticationData.Username,
+      Username : username,
       Pool : userPool
     };
 
