@@ -72,10 +72,8 @@ There are 3 categories of result:
                 "product" : "bond"
                 # etc. TODO: Only include things here that can be inferred from the input?
             }
-        ]
-    }},
-    "dataAttributes" : { 
-        "912828P46": [{ #only include verified characteristics
+        ],
+        "productDetails" : { #only include verified characteristics
             "product" : "bond",
             "maturityDate" : "mm/dd/yyyy",
             "currency" : "USD",
@@ -86,14 +84,8 @@ There are 3 categories of result:
                 "EARLY_REPAYMENT_OPTION",
                 #etc
             ]
-        }]
-    }
-    "dataSources" : { 
-        #Visually, each one of these could be a 'card' underneath the serach box.
-        #Goal would be to allow companies to include internal data sources, or allow for advertised
-        #data providers (E.g. Bloomberg)
-
-        "912828P46": [{
+        }],
+        "dataSources" : [{
             "dataProvider" : "Bloomberg OpenFIGI",
             "dataLicenseType" : "FREE", #PAYWALL
             "datalinks" : ["https://www.openfigi.com/search#!?simpleSearchString=912828P46", 
