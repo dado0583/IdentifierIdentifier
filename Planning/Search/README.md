@@ -60,24 +60,24 @@ There are 3 categories of result:
 ```
 {
     "input" : ["912828P46"],
+    "requestId" : "123e4567-e89b-12d3-a456-426614174000",
     "results" : [{
         "912828P46": { #Calling entity, as we will support more than identifiers longer term I think
         "substring": [0, 8],
         "entity" : "CUSIP",
         "entityType" : "FinancialIdentifier"
         "entityProvider" : "CUSIP",
-        "entityConfidence" : 1.0, # value can be 0 to 1.0
+        "entityConfidence" : 1.0,
         "tags" : [
             {
                 "product" : "bond"
-                # etc. TODO: Only include things here that can be inferred from the input?
             }
         ],
         "productDetails" : { #only include verified characteristics
             "product" : "bond",
             "maturityDate" : "mm/dd/yyyy",
             "currency" : "USD",
-            "issuerID" : "<ID>", #will have to think about this. There can be multiple id types for identifier so this may be nested
+            "issuerID" : "<ID>", 
             #etc
             "tags" : [
                 "INFLATION_LINKED",
@@ -87,12 +87,12 @@ There are 3 categories of result:
         }],
         "dataSources" : [{
             "dataProvider" : "Bloomberg OpenFIGI",
-            "dataLicenseType" : "FREE", #PAYWALL
+            "dataLicenseType" : "FREE", 
             "datalinks" : ["https://www.openfigi.com/search#!?simpleSearchString=912828P46", 
                 "https://www.openfigi.com/id/BBG00C59XZ86"]
         }, {
             "dataProvider" : "TreasuryDirect",
-            "dataLicenseType" : "FREE", #PAYWALL
+            "dataLicenseType" : "FREE", 
             "datalinks" : ["https://fiscaldata.treasury.gov/datasets/TODO!!!!"]
         }]
     }]
