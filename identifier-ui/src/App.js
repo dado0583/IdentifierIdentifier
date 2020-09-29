@@ -1,15 +1,25 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Auth from './Auth'
 import Search from './Search'
 import './App.css';
 
 function App() {
   const [token, setToken] = useState('');
+
   const onLoginSuccess = (result) => {
-    console.log('id token + ' + result.getIdToken().getJwtToken());
-    setToken(result.getIdToken().getJwtToken())
+    const token = result.getIdToken().getJwtToken();
+    localStorage.setItem('token', token)
+    setToken(token)
   };
   const onLoginFailure = (err) => console.log('error logging in:', err.message)
+
+  // check (only once) if token exists in localStorage. If it does not exist, we will render the Auth component.
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      setToken(token)
+    }
+  }, [])
 
   return (
     <div className="App">
