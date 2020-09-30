@@ -46,6 +46,17 @@ Format: a list of strings. Use this when providing multiples values
 
 ["912828P46"]
 
+## Storage of request
+
+{
+
+    "input" : ["912828P46"],
+    "requestSource" : "<ip>",
+    "user: {
+        "email" : "a@example.com"
+    }
+}
+
 ## Output
 
 TODO: Should we just have the entity ID (912828P46 as the root result? Simpler to read?)
