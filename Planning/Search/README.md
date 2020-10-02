@@ -79,11 +79,9 @@ There are 3 categories of result:
         "entityType" : "FinancialIdentifier"
         "entityProvider" : "CUSIP",
         "entityConfidence" : 1.0,
-        "tags" : [
-            {
-                "product" : "bond"
-            }
-        ],
+        "tags" : {
+            "product" : "bond"
+        },
         "productDetails" : { #only include verified characteristics
             "product" : "bond",
             "maturityDate" : "mm/dd/yyyy",
